@@ -1,0 +1,22 @@
+[
+    {
+        "question": "Which movies are based on books written by J.R.R. Tolkien?",
+        "genre": "film",
+        "answers": ["The Lord of the Rings", "The Hobbit"]
+    },
+    {
+        "question": "Name the actors that have played the character of Spiderman in movies?",
+        "genre": "film",
+        "answers": ["Tobey Maguire", "Andrew Garfield", "Tom Holland"]
+    },
+    {
+        "question": "Name the world's five oceans",
+        "genre": "geography",
+        "answers": ["Pacific", "Atlantic", "Indian", "Antarctic", "Arctic"]
+    },
+    {
+        "question": "Name the world's five largest countries by land area (any order)",
+        "genre": "geography",
+        "answers": ["Russia", "Canada", "China", "United States", "Brazil"]
+    }
+]
