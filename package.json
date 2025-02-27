@@ -1,0 +1,32 @@
+{
+  "name": "homework04-alissawu",
+  "version": "1.0.0",
+  "main": "index.js",
+  "directories": {
+    "test": "tests"
+  },
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "express": "^4.21.2",
+    "hbs": "^4.2.0",
+    "nodemon": "^3.1.9",
+    "uuid": "^11.1.0"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.21.0",
+    "chai": "^5.2.0",
+    "eslint": "^9.21.0",
+    "eslint-plugin-mocha": "^10.5.0",
+    "globals": "^16.0.0",
+    "jsdom": "^26.0.0",
+    "mocha": "^11.1.0",
+    "supertest": "^7.0.0"
+  }
+}
