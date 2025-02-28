@@ -126,3 +126,94 @@ app.post("/quiz", (req, res) => {
     status
   });
 });
+
+
+
+
+
+// GET & POST /questions -> display existing queries and add new ones
+app.get("/questions", (req, res) => {
+    const { search } = req.query;
+  
+    // if no search, display everything
+    let filtered = queries;
+  
+    if (search) {
+      // case-insensitive partial match on question, genre, or an answer
+      const s = search.toLowerCase();
+      filteredqueries.filter(q => {
+        // check question
+        const matchQuestion = q.question.toLowerCase().includes(s);
+        // check genre
+        const matchGenre = q.genre.toLowerCase().includes(s);
+        // check answers
+        const matchAnswers = q.answers.some(ans =>
+          ans.toLowerCase().includes(s)
+        );
+        return matchQuestion || matchGenre || matchAnswers;
+      });
+    }
+  
+    res.render("questions", {
+      queries: filtered,
+      search: search || ""
+    });
+  });
+  
+  app.post("/questions", (req, res) => {
+    // for the "add new question" form
+    const { question, genre, answers } = req.body;
+  
+    // convert answers to an array
+    const ansArr = answers
+      .split(",")
+      .map(a => a.trim())
+      .filter(a => a.length > 0);
+  
+    // create a new Query object
+    const newQuery = new Query(
+      uuidv4(),
+      question,
+      genre,
+      ansArr
+    );
+  
+    // add to global array
+    queries.push(newQuery);
+  
+    // redirect to /questions so that the user sees the updated list
+    // so a page refresh won't re-POST the same question
+    res.redirect("/questions");
+  });
+  
+  // load the JSON file, populate "queries", then start the server
+  fs.readFile(questionBankPath, "utf8", (err, data) => {
+    if (err) {
+      console.error("Error reading question-bank.json:", err);
+      process.exit(1);
+    }
+  
+    try {
+      const parsed = JSON.parse(data);
+      queries = parsed.map(item => {
+        return new Query(
+          uuidv4(),
+          item.question,
+          item.genre,
+          item.answers
+        );
+      });
+      console.log("Loaded questions from JSON. Starting server...");
+  
+      server = app.listen(3000, () => {
+        console.log("Server started on http://localhost:3000");
+        console.log("Type CTRL+C to shut down");
+      });
+    } catch (jsonErr) {
+      console.error("Error parsing JSON:", jsonErr);
+      process.exit(1);
+    }
+  });
+  
+  
+  
