@@ -3,10 +3,10 @@
 <form action="/quiz" method="POST">
   <label>{{question}}</label><br>
 
-  <!-- Hidden field to remember which question user is answering -->
+  <!-- remember the question the user is answering -->
   <input type="hidden" name="id" value="{{id}}" />
 
-  <!-- The user's typed answer -->
+  <!-- the user's answer -->
   <input type="text" name="answer" value="{{answer}}" />
 
   <button type="submit">Submit</button>
