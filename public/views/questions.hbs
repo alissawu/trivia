@@ -1,0 +1,39 @@
+<h2>All Questions</h2>
+
+<form action="/questions" method="GET">
+  <input type="search" name="search" placeholder="Search..." value="{{search}}" />
+  <button type="submit">Search</button>
+</form>
+
+<hr/>
+
+<form action="/questions" method="POST">
+  <label for="question">Question:</label>
+  <input type="text" name="question" id="question" />
+
+  <label for="genre">Genre:</label>
+  <input type="text" name="genre" id="genre" />
+
+  <label for="answers">Answers (comma-separated):</label>
+  <input type="text" name="answers" id="answers" />
+
+  <button type="submit">Add New</button>
+</form>
+
+<hr/>
+
+<ul>
+  {{#each queries}}
+    <li>
+      <strong>{{question}}</strong>
+      <em>({{genre}})</em>
+      <br/>
+      {{!-- Nested each for listing answers --}}
+      <ul>
+        {{#each answers}}
+          <li>{{this}}</li>
+        {{/each}}
+      </ul>
+    </li>
+  {{/each}}
+</ul>
