@@ -1,1 +1,67 @@
-/* Add all your CSS here */
+body {
+    font-family: sans-serif;
+    margin: 1rem;
+    background-color: #fdfdfd;
+  }
+  
+  header {
+    background: #333;
+    color: #eee;
+    padding: 1rem;
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+  }
+  
+  header a {
+    color: #ccc;
+    text-decoration: none;
+  }
+  
+  nav a {
+    margin-right: 1rem;
+    color: #fff;
+  }
+  
+  h1 {
+    margin: 0;
+  }
+  
+  .logo {
+    width: 50px;
+    height: 50px;
+  }
+  
+  /* Classes used by the decorate function: */
+  .correct-answer {
+    background-color: #88ff88;
+    padding: 2px 4px;
+    border-radius: 3px;
+  }
+  
+  .incorrect-answer {
+    background-color: #ff8888;
+    padding: 2px 4px;
+    border-radius: 3px;
+  }
+  
+  /* For status messages */
+  .status {
+    margin: 1rem 0;
+    padding: 0.5rem;
+    border-radius: 4px;
+  }
+  
+  .status.Incorrect {
+    background-color: #ffdddd;
+    border: 1px solid red;
+  }
+  .status.Partially\ Correct {
+    background-color: #ffffcc;
+    border: 1px solid #888;
+  }
+  .status.Correct {
+    background-color: #ddffdd;
+    border: 1px solid green;
+  }
+  

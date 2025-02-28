@@ -1,0 +1,24 @@
+<h2>Take the Quiz!</h2>
+
+<form action="/quiz" method="POST">
+  <label>{{question}}</label><br>
+
+  <!-- Hidden field to remember which question user is answering -->
+  <input type="hidden" name="id" value="{{id}}" />
+
+  <!-- The user's typed answer -->
+  <input type="text" name="answer" value="{{answer}}" />
+
+  <button type="submit">Submit</button>
+</form>
+
+{{#if status}}
+  <div class="status {{status}}">
+    <strong>{{status}}</strong>
+  </div>
+  {{#if correction}}
+    <div class="correction">
+      {{{correction}}}
+    </div>
+  {{/if}}
+{{/if}}
