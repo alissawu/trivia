@@ -107,15 +107,25 @@ app.post("/quiz", (req, res) => {
   });
 
   // determine the amount of correctness
-  let status = "";
-  if (correctCount === 0) {
-    status = "Incorrect";
-  } else if (correctCount === quizQuestion.answers.length &&
-             userAnswers.length === quizQuestion.answers.length) {
-    status = "Correct";
-  } else {
-    status = "Partially Correct";
-  }
+let status = ""
+const lowerCorrect = quizQuestion.answers.map(a => a.toLowerCase());
+const lowerUser = userAnswers.map(a => a.toLowerCase());
+
+// if all user answers are correct AND distinct
+const allCorrect = 
+  lowerUser.length === lowerCorrect.length &&
+  new Set(lowerUser).size === lowerCorrect.length &&
+  lowerUser.every(ans => lowerCorrect.includes(ans));
+
+if (allCorrect) {
+  status = "Correct";
+} else if (lowerUser.some(ans => lowerCorrect.includes(ans))) {
+  status = "Partially Correct";
+} else {
+  status = "Incorrect";
+}
+
+  
 
   // re-render quiz question but keep the same page
   res.render("quiz", {
@@ -137,22 +147,20 @@ app.get("/questions", (req, res) => {
   
     // if no search, display everything
     let filtered = queries;
-  
+
     if (search) {
-      // case-insensitive partial match on question, genre, or an answer
-      const s = search.toLowerCase();
-      filteredqueries.filter(q => {
-        // check question
+    const s = search.toLowerCase();
+    filtered = queries.filter(q => {
         const matchQuestion = q.question.toLowerCase().includes(s);
-        // check genre
         const matchGenre = q.genre.toLowerCase().includes(s);
-        // check answers
         const matchAnswers = q.answers.some(ans =>
-          ans.toLowerCase().includes(s)
+        ans.toLowerCase().includes(s)
         );
         return matchQuestion || matchGenre || matchAnswers;
-      });
+    });
     }
+
+      
   
     res.render("questions", {
       queries: filtered,
