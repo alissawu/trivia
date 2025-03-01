@@ -169,13 +169,14 @@ app.get("/questions", (req, res) => {
   });
   
   app.post("/questions", (req, res) => {
+    console.log("DEBUG: new question body:", req.body);
     // for the "add new question" form
     const { question, genre, answers } = req.body;
   
     // convert answers to an array
     const ansArr = answers
       .split(",")
-      .map(a => a.trim())
+      .map(a => a)
       .filter(a => a.length > 0);
   
     // create a new Query object
