@@ -95,19 +95,15 @@ app.post("/quiz", (req, res) => {
     .filter(a => a.length > 0);
 
   // check each user answer vs the real answers
-  let correctCount = 0;
   const decoratedAnswers = userAnswers.map(ans => {
     const isCorrect = quizQuestion.answers.some(
       correctAns => correctAns.toLowerCase() === ans.toLowerCase()
     );
-    if (isCorrect) {
-      correctCount++;
-    }
     return decorate(ans, isCorrect);
   });
 
   // determine the amount of correctness
-let status = ""
+let status = "";
 const lowerCorrect = quizQuestion.answers.map(a => a.toLowerCase());
 const lowerUser = userAnswers.map(a => a.toLowerCase());
 
@@ -131,7 +127,7 @@ if (allCorrect) {
   res.render("quiz", {
     question: quizQuestion.question,
     id: quizQuestion.id,
-    answer,            // keep the user's typed answer in the input
+    answer, // keep the user's typed answer in the input
     correction: decoratedAnswers.join(", "),
     status
   });
