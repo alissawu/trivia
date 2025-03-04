@@ -12,6 +12,13 @@
   <button type="submit">Submit</button>
 </form>
 
+<!-- next question -->
+<form action="/quiz" method="GET">
+  <input type="hidden" name="next" value="true" />
+  <input type="hidden" name="prevId" value="{{id}}" />
+  <button type="submit">Next Question</button>
+</form>
+
 {{#if status}}
   <div class="status {{status}}">
     <strong>{{status}}</strong>

@@ -60,11 +60,6 @@
         "answers": ["Nitrogen", "Oxygen", "Carbon Dioxide", "Argon"]
     },
     {
-        "question": "Which organs are part of the digestive system?",
-        "genre": "health",
-        "answers": ["Stomach", "Intestines", "Liver", "Pancreas", "Esophagus"]
-    },
-    {
         "question": "Which U.S. states border Canada?",
         "genre": "geography",
         "answers": ["Alaska", "Washington", "Montana", "North Dakota", "Minnesota"]
