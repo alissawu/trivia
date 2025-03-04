@@ -15,7 +15,7 @@
         "answers": ["Pacific", "Atlantic", "Indian", "Antarctic", "Arctic"]
     },
     {
-        "question": "Name the world's five largest countries by land area (any order)",
+        "question": "Name the world's five largest countries by land area",
         "genre": "geography",
         "answers": ["Russia", "Canada", "China", "United States", "Brazil"]
     },
@@ -30,14 +30,9 @@
         "answers": ["Carbohydrates", "Proteins", "Fats"]
     },
     {
-        "question": "Which type of fat is considered heart-healthy?",
-        "genre": "health",
-        "answers": ["Unsaturated fat", "Monounsaturated fat", "Polyunsaturated fat"]
-    },
-    {
-        "question": "Which fruit is known for having the highest vitamin C content per serving?",
+        "question": "Which 3 fruits are known for having the highest vitamin C content per serving?",
         "genre": "food",
-        "answers": ["Guava", "Kiwi", "Strawberries", "Oranges"]
+        "answers": ["Kakadu plums", "Acerola cherries", "Rose hips"]
     },
     {
         "question": "What are the five basic tastes humans can detect?",
@@ -55,43 +50,28 @@
         "answers": ["Red", "Blue", "Yellow"]
     },
     {
-        "question": "Which planet in our solar system has the most moons?",
+        "question": "Which planets in our solar system have rings?",
         "genre": "random",
-        "answers": ["Saturn"]
+        "answers": ["Saturn", "Jupiter", "Uranus", "Neptune"]
     },
     {
-        "question": "What is the tallest mountain on Earth?",
-        "genre": "random",
-        "answers": ["Mount Everest"]
-    },
-    {
-        "question": "What is the only mammal capable of true flight?",
-        "genre": "random",
-        "answers": ["Bat"]
-    },
-    {
-        "question": "Which gas do plants absorb from the atmosphere during photosynthesis?",
+        "question": "Which gases are present in Earth's atmosphere?",
         "genre": "science",
-        "answers": ["Carbon Dioxide"]
+        "answers": ["Nitrogen", "Oxygen", "Carbon Dioxide", "Argon"]
     },
     {
-        "question": "What is the main ingredient in traditional hummus?",
-        "genre": "food",
-        "answers": ["Chickpeas"]
+        "question": "Which organs are part of the digestive system?",
+        "genre": "health",
+        "answers": ["Stomach", "Intestines", "Liver", "Pancreas", "Esophagus"]
     },
     {
-        "question": "Which famous scientist developed the theory of general relativity?",
-        "genre": "science",
-        "answers": ["Albert Einstein"]
-    },
-    {
-        "question": "What is the capital city of Canada?",
+        "question": "Which U.S. states border Canada?",
         "genre": "geography",
-        "answers": ["Ottawa"]
+        "answers": ["Alaska", "Washington", "Montana", "North Dakota", "Minnesota"]
     },
     {
-        "question": "Which part of the plant conducts photosynthesis?",
-        "genre": "science",
-        "answers": ["Leaves"]
+        "question": "Which countries are part of the G7?",
+        "genre": "geography",
+        "answers": ["United States", "Canada", "United Kingdom", "France", "Germany", "Italy", "Japan"]
     }
 ]
