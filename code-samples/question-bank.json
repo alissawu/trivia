@@ -18,5 +18,80 @@
         "question": "Name the world's five largest countries by land area (any order)",
         "genre": "geography",
         "answers": ["Russia", "Canada", "China", "United States", "Brazil"]
+    },
+    {
+        "question": "Which vitamins are considered essential for maintaining good vision?",
+        "genre": "health",
+        "answers": ["Vitamin A", "Vitamin C", "Vitamin E"]
+    },
+    {
+        "question": "What are the three macronutrients in a balanced diet?",
+        "genre": "health",
+        "answers": ["Carbohydrates", "Proteins", "Fats"]
+    },
+    {
+        "question": "Which type of fat is considered heart-healthy?",
+        "genre": "health",
+        "answers": ["Unsaturated fat", "Monounsaturated fat", "Polyunsaturated fat"]
+    },
+    {
+        "question": "Which fruit is known for having the highest vitamin C content per serving?",
+        "genre": "food",
+        "answers": ["Guava", "Kiwi", "Strawberries", "Oranges"]
+    },
+    {
+        "question": "What are the five basic tastes humans can detect?",
+        "genre": "food",
+        "answers": ["Sweet", "Sour", "Salty", "Bitter", "Umami"]
+    },
+    {
+        "question": "What is the most widely consumed beverage in the world after water?",
+        "genre": "food",
+        "answers": ["Tea"]
+    },
+    {
+        "question": "What are the three primary colors?",
+        "genre": "random",
+        "answers": ["Red", "Blue", "Yellow"]
+    },
+    {
+        "question": "Which planet in our solar system has the most moons?",
+        "genre": "random",
+        "answers": ["Saturn"]
+    },
+    {
+        "question": "What is the tallest mountain on Earth?",
+        "genre": "random",
+        "answers": ["Mount Everest"]
+    },
+    {
+        "question": "What is the only mammal capable of true flight?",
+        "genre": "random",
+        "answers": ["Bat"]
+    },
+    {
+        "question": "Which gas do plants absorb from the atmosphere during photosynthesis?",
+        "genre": "science",
+        "answers": ["Carbon Dioxide"]
+    },
+    {
+        "question": "What is the main ingredient in traditional hummus?",
+        "genre": "food",
+        "answers": ["Chickpeas"]
+    },
+    {
+        "question": "Which famous scientist developed the theory of general relativity?",
+        "genre": "science",
+        "answers": ["Albert Einstein"]
+    },
+    {
+        "question": "What is the capital city of Canada?",
+        "genre": "geography",
+        "answers": ["Ottawa"]
+    },
+    {
+        "question": "Which part of the plant conducts photosynthesis?",
+        "genre": "science",
+        "answers": ["Leaves"]
     }
 ]
