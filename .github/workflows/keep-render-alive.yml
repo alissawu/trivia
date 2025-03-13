@@ -1,0 +1,13 @@
+name: Keep Render Site Alive (possibly 2.0 but I cant find 1.0)?
+
+on:
+  schedule:
+    - cron: "*/15 * * * *"  # Runs every 15 minutes
+  workflow_dispatch:  # Allows manual triggering
+
+jobs:
+  keep-alive:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Send request to Render site
+        run: curl -s -o /dev/null https://trivia-80jp.onrender.com/quiz
